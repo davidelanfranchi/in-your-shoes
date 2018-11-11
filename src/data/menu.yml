@@ -1,0 +1,14 @@
+it:
+  -
+    id: about-section
+    label: Chi sono
+  -
+    id: services-section
+    label: Cosa faccio
+en:
+  -
+    id: about-section
+    label: About me
+  -
+    id: services-section
+    label: Services

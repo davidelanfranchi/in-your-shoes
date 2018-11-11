@@ -1,0 +1,19 @@
+.nav{
+	z-index: 10;
+}
+.photo{
+	z-index: 9;
+}
+
+.padded{
+	padding-left: 1em;
+	padding-right: 1em;
+	@include breakpoint(large){
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@include breakpoint(xlarge){
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}

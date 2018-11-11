@@ -1,0 +1,46 @@
+<div class="hero padded">
+
+	<div class="hero__main-content">
+		<h1>
+			{{#ifequal language 'it'}}
+			{{{ content.hero_heading.it }}}
+			{{/ifequal}}
+			{{#ifequal language 'en'}}
+			{{{ content.hero_heading.en }}}
+			{{/ifequal}}
+		</h1>
+		<p>
+			{{#ifequal language 'it'}}
+			{{{ content.hero_body.it }}}
+			{{/ifequal}}
+			{{#ifequal language 'en'}}
+			{{{ content.hero_body.en }}}
+			{{/ifequal}}
+		</p>
+	</div>
+
+	<div class="hero__bottom padded">
+		<h2 class="hero__bottom-line">
+			{{#ifequal language 'it'}}
+			{{{ content.hero_bottom-line.it }}}
+			{{/ifequal}}
+			{{#ifequal language 'en'}}
+			{{{ content.hero_bottom-line.en }}}
+			{{/ifequal}}
+		</h2>
+		<button class="cta2">
+			<svg width="11" height="26" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5.089 25.089a.834.834 0 0 0 .265-.044.426.426 0 0 0 .221-.177l4.243-4.243c.354-.324.361-.656.022-.994-.339-.34-.67-.332-.994.022l-3.05 3.005V1.618a.688.688 0 0 0-.199-.508A.688.688 0 0 0 5.09.91a.688.688 0 0 0-.508.199.688.688 0 0 0-.2.508v21.04l-3.049-3.005c-.324-.354-.655-.361-.994-.022-.34.338-.332.67.022.994l4.243 4.243a.426.426 0 0 0 .22.177c.09.03.178.044.266.044z"
+					fill="#307491" fill-rule="nonzero" /></svg>
+					<span>
+						{{#ifequal language 'it'}}
+						{{{ content.hero_cta.it }}}
+						{{/ifequal}}
+						{{#ifequal language 'en'}}
+						{{{ content.hero_cta.en }}}
+						{{/ifequal}}
+					</span>
+		</button>
+	</div>
+
+</div>

@@ -1,0 +1,36 @@
+<nav class="nav">
+	<div class="row expanded collapse">
+
+		<div class="small-12 large-7 columns">
+
+			<div class="row align-middle nav__left padded">
+				<div class="columns">
+					<img class="nav__logo" src="/assets/img/logo@2x.png" alt="Logo In Your Shoes">
+				</div>
+				<div class="columns">
+					<ul class="nav__menu">
+						{{#ifequal language 'it'}}
+						{{#each menu.it}}
+						<li><a class="nav__menu-item" href="#{{ this.id }}">{{ this.label }}<span>.</span></a></li>
+						{{/each}}
+						{{/ifequal}}
+						{{#ifequal language 'en'}}
+						{{#each menu.en}}
+						<li><a class="nav__menu-item" href="#{{ this.id }}">{{ this.label }}<span>.</span></a></li>
+						{{/each}}
+						{{/ifequal}}
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="small-12 large-5 columns align-self-middle">
+			<ul class="nav__lang">
+				<li><a class="nav__lang-item" href="/">it</a></li>
+				<li><a class="nav__lang-item" href="/en">en</a></li>
+			</ul>
+		</div>
+
+	</div>
+</nav>

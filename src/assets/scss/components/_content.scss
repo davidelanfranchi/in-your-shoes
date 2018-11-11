@@ -1,0 +1,48 @@
+// Elements
+
+.content-heading{
+	font-size: 50px;
+	color: $primary-color;
+
+	&.-small{
+		font-size: 35px;
+	}
+}
+.content-subheading{
+	font-size: 18px;
+	color: $secondary-color;
+	font-family: 'Oswald', Helvetica, Roboto, Arial, sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+.content-body{
+	font-size: 18px;
+}
+.content-highlight{
+	color: $primary-color;
+	font-weight: bold;
+	font-size: 25px;
+}
+.content-super-highlight{
+	color: $secondary-color;
+	font-weight: bold;
+	font-size: 35px;
+}
+
+// General style
+
+.content{
+	// min-height: 100vh;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint(xlarge){
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+}
+
+// Content 1
+
+.content.-content1{
+	background-color: #FFF9F4;
+}
