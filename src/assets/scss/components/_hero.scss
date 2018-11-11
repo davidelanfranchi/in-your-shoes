@@ -1,5 +1,12 @@
 .hero{
 	
+	padding-top: 100px;
+	padding-bottom: 100px;
+	@include breakpoint(xlarge){
+		padding-top: 150px;
+		padding-bottom: 150px;
+	}
+	
 	@include breakpoint(large){
 		height: 100vh;
 		height: calc(100vh - var(--vh-offset, 0px));
