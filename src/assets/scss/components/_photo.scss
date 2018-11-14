@@ -1,10 +1,11 @@
 .photo{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 41.66667%;
+	
 
 	@include breakpoint(large){
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 41.66667%;
 		height: 100vh;
 		height: calc(100vh - var(--vh-offset, 0px));
 	}
