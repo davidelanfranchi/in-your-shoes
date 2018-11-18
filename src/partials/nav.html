@@ -11,12 +11,12 @@
 					<ul class="nav__menu">
 						{{#ifequal language 'it'}}
 						{{#each menu.it}}
-						<li><a class="nav__menu-item" href="#{{ this.id }}">{{ this.label }}<span>.</span></a></li>
+						<li><a class="nav__menu-item" href="#{{ this.id }}" data-scroll-to>{{ this.label }}<span>.</span></a></li>
 						{{/each}}
 						{{/ifequal}}
 						{{#ifequal language 'en'}}
 						{{#each menu.en}}
-						<li><a class="nav__menu-item" href="#{{ this.id }}">{{ this.label }}<span>.</span></a></li>
+						<li><a class="nav__menu-item" href="#{{ this.id }}" data-scroll-to>{{ this.label }}<span>.</span></a></li>
 						{{/each}}
 						{{/ifequal}}
 					</ul>

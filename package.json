@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "foundation-sites": "~6.4.1",
+    "gsap": "^2.0.2",
     "jquery": "^3.2.1",
     "motion-ui": "^2.0.3",
     "vh-check": "^2.0.5",
