@@ -1,0 +1,13 @@
+.contactpanel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: calc(100vh - var(--vh-offset, 0px));
+  background-color: $primary-color;
+
+  width: 100%;
+  @include breakpoint(large) {
+    width: 58.33333%;
+  }
+}

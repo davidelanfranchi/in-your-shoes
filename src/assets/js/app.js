@@ -21,3 +21,6 @@ $scrollToElements.click(function(e) {
   e.preventDefault();
 	TweenLite.to(window, 1, { scrollTo: $(this).attr('href'), offsetY: 200, ease: Power4.easeOut});
 });
+
+import contactPanel from './modules/contactPanel';
+const contact_panel = new contactPanel();
