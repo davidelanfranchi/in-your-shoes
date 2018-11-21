@@ -3,7 +3,7 @@
 .content-heading {
   color: $primary-color;
   margin-bottom: 0.3em;
-  line-height: 1.2;
+  line-height: 1;
   font-size: 40px;
   @include breakpoint(medium) {
     font-size: 40px;
@@ -13,6 +13,7 @@
   }
 
   &.-small {
+    line-height: 1.3;
     font-size: 30px;
     @include breakpoint(medium) {
       font-size: 35px;
@@ -49,31 +50,39 @@
 .content-super-highlight {
   color: $secondary-color;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 25px;
+  @include breakpoint(medium) {
+    font-size: 30px;
+  }
+  @include breakpoint(large) {
+    font-size: 35px;
+  }
 }
 
 .content-script-img {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   z-index: 0;
   transform: translateY(-60%) rotate(-6deg);
+  @include breakpoint(medium) {
+    top: 0;
+  }
 }
 
 // General style
 
 .content {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   @include breakpoint(large) {
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 100px;
   }
   @include breakpoint(xlarge) {
     padding-top: 180px;
     padding-bottom: 150px;
   }
-  min-height: 100vh;
   > .row {
     position: relative;
   }
@@ -84,7 +93,10 @@
 .content.-content1 {
   background-color: #fff9f4;
   .content-script-img {
-    width: 274px;
+    width: 214px;
+    @include breakpoint(medium) {
+      width: 274px;
+    }
   }
 }
 
@@ -92,6 +104,25 @@
 
 .content.-content2 {
   .content-script-img {
-    width: 268px;
+    width: 208px;
+    @include breakpoint(medium) {
+      width: 268px;
+    }
+  }
+}
+
+// Content 2
+
+.content.-content3 {
+  background-color: #ffb6ae;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  @include breakpoint(large) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .content-super-highlight {
+    margin-bottom: 0;
+    color: white;
   }
 }

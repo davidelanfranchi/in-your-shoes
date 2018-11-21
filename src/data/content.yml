@@ -39,3 +39,15 @@ content2_bottom-line:
 content2_closing:
   it: 'Sarò felice di darti una mano cercando di seguire il tuo gusto estetico, restando nel budget indicato e rendendo l’esperienza dello shopping veloce, soddisfacente e indolore anche per te!'
   en: 'Sarò felice di darti una mano cercando di seguire il tuo gusto estetico, restando nel budget indicato e rendendo l’esperienza dello shopping veloce, soddisfacente e indolore anche per te!'
+
+content3_heading: 
+  it: 'Vuoi maggiori informazioni sulla mia consulenza come personal shopper?'
+  en: 'Do you want more information about my personal shopper service?'
+content3_cta: 
+  it: 'Scrivimi.'
+  en: 'Write me.'
+content3_note: 
+  it: 'Se vuoi, accompagna la tua richiesta con alcune informazioni di base: <strong>il capo o l’outfit</strong> di cui hai bisogno, <strong>l’occasione</strong> per cui lo cerchi e <strong>il budget indicativo</strong> a tua disposizione.'
+  en: 'If you want, add to your request some basic information about <strong>the item or outfit</strong> you need, <strong>the occasion</strong> for which you are looking for it and <strong>the indicative budget</strong> available to you.'
+
+contact_email: 'info@inyourshoes.com'

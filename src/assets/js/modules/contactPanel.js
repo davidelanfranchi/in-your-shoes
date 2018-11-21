@@ -3,6 +3,7 @@ import {TweenLite, TimelineLite, Expo} from 'gsap/all';
 export default class contactPanel {
   constructor() {
     this.$contactPanel = $('.contactpanel');
+    this.$mainCta = $('.maincta');
     this.$contactPanelToStaggerElements1 = this.$contactPanel.find(
       '.-to-stagger-1'
     );
@@ -22,7 +23,7 @@ export default class contactPanel {
       paused: true,
       onComplete: () => {}
     });
-    this.tl.from(this.$contactPanel, .6, { x: '-100%', ease: Expo.easeOut});
+    this.tl.from(this.$contactPanel, 0.6, {x: '-100%', ease: Expo.easeOut});
     // this.tl.staggerFrom(
     // 	this.$contactPanelToStaggerElements1,
     // 	0.3,
@@ -42,12 +43,14 @@ export default class contactPanel {
 
   showContactPanel() {
     this.isVisible = true;
+    this.$mainCta.addClass('is-state-2');
     this.tl.timeScale(1);
     this.tl.play();
   }
 
   hideContactPanel() {
     this.isVisible = false;
+    this.$mainCta.removeClass('is-state-2');
     this.tl.timeScale(2);
     this.tl.reverse();
   }
@@ -64,7 +67,11 @@ export default class contactPanel {
     // close if click outside element
 
     $(document).on('click', e => {
-			if (this.isVisible && !$(e.target).closest('.contactpanel').length && !$(e.target).closest('.maincta').length) {
+      if (
+        this.isVisible &&
+        !$(e.target).closest('.contactpanel').length &&
+        !$(e.target).closest('.maincta').length
+      ) {
         this.hideContactPanel();
       }
     });

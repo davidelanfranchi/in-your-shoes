@@ -52,6 +52,7 @@
 @include motion-ui-animations;
 
 @import 'global/reset';
+@import 'global/colors';
 @import 'global/layout';
 @import 'global/typography';
 
@@ -60,5 +61,6 @@
 @import 'components/photo';
 @import 'components/content';
 @import 'components/maincta';
+@import 'components/cta1';
 @import 'components/cta2';
 @import 'components/contactpanel';

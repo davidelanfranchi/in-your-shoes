@@ -33,6 +33,10 @@
 .padded {
   padding-left: 1em;
   padding-right: 1em;
+  @include breakpoint(medium) {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
   @include breakpoint(large) {
     padding-left: 40px;
     padding-right: 40px;

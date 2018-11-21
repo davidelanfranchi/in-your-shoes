@@ -1,14 +1,28 @@
-.photo{
-	
+.photo {
+  background-color: #f7f7f7;
+  overflow: hidden;
 
-	@include breakpoint(large){
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 41.66667%;
-		height: 100vh;
-		height: calc(100vh - var(--vh-offset, 0px));
-	}
+  &__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-	background-color: #FAFAFA;
+  @include breakpoint(large) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 41.66667%;
+    height: 100vh;
+    height: calc(100vh - var(--vh-offset, 0px));
+
+    &__img {
+      position: absolute;
+      bottom: 0;
+      width: 550px;
+      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }

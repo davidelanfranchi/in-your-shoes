@@ -32,13 +32,17 @@
         font-size: 35px;
       }
     }
+
+    transform: translateY(0);
+    transition: transform 0.6s cubic-bezier(0, 1.03, 0.58, 1);
   }
-  .-state1 {
+  &.is-state-2 &__label {
+    transform: translateY(100%);
   }
   .-state2 {
-    top: 60px;
+    top: -60px;
     @include breakpoint(medium) {
-      top: 80px;
+      top: -80px;
     }
   }
 }

@@ -34,7 +34,7 @@
       left: 0;
       width: 100%;
     }
-    @include breakpoint(medium down) {
+    @include breakpoint(small down) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -51,6 +51,7 @@
 }
 
 .hero-heading {
+  line-height: 1;
   font-size: 45px;
   margin-bottom: 0.5em;
   @include breakpoint(medium) {
@@ -68,14 +69,15 @@
 
 .hero-paragraph {
   font-size: 20px;
-
+  margin-bottom: 2em;
   @include breakpoint(medium) {
     font-size: 20px;
+    margin-bottom: 4em;
+  }
+  @include breakpoint(large) {
+    margin-bottom: 0;
   }
   @include breakpoint(xlarge) {
     font-size: 20px;
-  }
-  @include breakpoint(medium down) {
-    margin-bottom: 2em;
   }
 }
