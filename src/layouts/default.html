@@ -13,7 +13,7 @@
 
 <body>
 
-  {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+  {{> loading}}
 
   {{> nav}}
 
@@ -27,6 +27,9 @@
       {{> content1 }}
       {{> content2 }}
       {{> content3 }}
+    </div>
+    <div class="small-12 large-5 columns show-for-large">
+      {{> shapes }}
     </div>
   </div>
 

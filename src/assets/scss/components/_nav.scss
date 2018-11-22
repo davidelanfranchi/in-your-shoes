@@ -37,10 +37,13 @@
     }
   }
   &__menu-item {
+    display: inline-block;
+    position: relative;
     font-weight: bold;
     margin-left: 1em;
     span {
-      color: $secondary-color;
+      color: $pink;
+      font-size: 1.3em;
     }
   }
   &__lang {

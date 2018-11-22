@@ -13,14 +13,58 @@ $(document).foundation();
 import vhCheck from 'vh-check';
 const vhTest = vhCheck();
 
-import {TweenLite, ScrollToPlugin, Power4} from 'gsap/all';
+import {TweenLite, TimelineLite, ScrollToPlugin, Power4, Expo} from 'gsap/all';
 const plugins = [ScrollToPlugin, Power4];
 
 const $scrollToElements = $('[data-scroll-to]');
 $scrollToElements.click(function(e) {
   e.preventDefault();
-	TweenLite.to(window, 1, { scrollTo: $(this).attr('href'), offsetY: 200, ease: Power4.easeOut});
+  TweenLite.to(window, 1, {
+    scrollTo: $(this).attr('href'),
+    offsetY: 200,
+    ease: Power4.easeOut
+  });
 });
 
 import contactPanel from './modules/contactPanel';
 const contact_panel = new contactPanel();
+
+import Shapes from './modules/Shapes';
+const shapes = new Shapes();
+
+// Loading overlay
+const $loading = $('.loading');
+const $loadingLogo = $('.loading__logo');
+const $navItems = $(
+  '.nav__menu-item, .nav__lang-item, .hero__bottom-line, .cta2'
+);
+const $mainCta = $('.maincta');
+const $icons = $('.bal-01, .bal-02, .hang-01');
+
+const loadingTl = new TimelineLite({
+  paused: true
+});
+
+loadingTl.to($loadingLogo, 0.3, {opacity: 0, y: -400, delay: 0.6});
+loadingTl.to($loading, 0.3, {y: '-100%'});
+loadingTl.staggerFromTo(
+  $navItems,
+  0.6,
+  {opacity: 0, y: 20},
+  {opacity: 1, y: 0},
+  0.1
+);
+loadingTl.from($mainCta, 1, {opacity: 0, y: '200%'}, '-=0.6');
+loadingTl.staggerFromTo(
+  $icons,
+  .6,
+  {opacity: 0, y: 50, scale: 0},
+  {opacity: 1, y: 0, scale: 1},
+  0.2
+);
+
+$loading.hide();
+
+$(window).on('load', () => {
+  loadingTl.play();
+});
