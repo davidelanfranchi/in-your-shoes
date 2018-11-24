@@ -35,6 +35,22 @@ export default class Shapes {
         })
       );
     });
+    document.querySelectorAll('.transformed-shape-2').forEach((elem, i) => {
+      bsInstances.push(
+        basicScroll.create({
+          elem: elem,
+          from: 'middle-bottom',
+          to: 'bottom-top',
+          direct: true,
+          props: {
+            '--s': {
+              from: '.5',
+              to: '1.2'
+            }
+          }
+        })
+      );
+    });
 
     bsInstances.forEach(instance => {
       instance.start();
