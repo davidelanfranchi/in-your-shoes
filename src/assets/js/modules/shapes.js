@@ -28,7 +28,7 @@ export default class Shapes {
               to: '.5turn'
             },
             '--s': {
-              from: '.8',
+              from: '.5',
               to: '1.2'
             }
           }

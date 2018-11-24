@@ -1,4 +1,15 @@
+
 <button class="maincta" data-contactpanel-toggle>
-	<span class="maincta__label -state1"><span>👋</span></span>
-	<span class="maincta__label -state2"><span>🔙</span></span>
+	<span class="maincta__button">
+		<span class="maincta__button-label -state1"><span>👋</span></span>
+		<span class="maincta__button-label -state2"><span>🔙</span></span>
+	</span>
+	<span class="maincta__label">
+		{{#ifequal language 'it'}}
+		{{{ content.maincta_label.it }}}
+		{{/ifequal}}
+		{{#ifequal language 'en'}}
+		{{{ content.maincta_label.en }}}
+		{{/ifequal}}
+	</span>
 </button>

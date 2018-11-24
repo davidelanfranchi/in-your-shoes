@@ -19,7 +19,7 @@ const plugins = [ScrollToPlugin, Power4];
 const $scrollToElements = $('[data-scroll-to]');
 $scrollToElements.click(function(e) {
   e.preventDefault();
-  TweenLite.to(window, 1, {
+  TweenLite.to(window, 1.5, {
     scrollTo: $(this).attr('href'),
     offsetY: 200,
     ease: Power4.easeOut

@@ -1,4 +1,15 @@
 .nav {
+  > .row {
+    @include breakpoint(medium down) {
+      background: linear-gradient(#ffffff, #ffffff00);
+    }
+  }
+  .padded {
+    @include breakpoint(medium down) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
   @include breakpoint(medium) {
     position: fixed;
     top: 0;
@@ -9,7 +20,7 @@
   &__left {
     padding-top: 2em;
     padding-bottom: 2em;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       background: linear-gradient(#ffffff, #ffffff00);
     }
   }
@@ -45,6 +56,9 @@
       color: $pink;
       font-size: 1.3em;
     }
+    &:focus {
+      color: #4a4a4a;
+    }
   }
   &__lang {
     margin-bottom: 0;
@@ -66,8 +80,10 @@
     line-height: 30px;
     text-align: center;
 
+    transition: color 0.3s;
+
     &:hover {
-      color: currentColor;
+      color: black;
     }
 
     span {
@@ -99,7 +115,7 @@
       transform: scale(1);
     }
     &.is-active:before {
-      opacity: 0.2;
+      opacity: 0.3;
       transform: scale(1);
     }
   }
