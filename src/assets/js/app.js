@@ -34,7 +34,7 @@ const shapes = new Shapes();
 
 // Loading overlay
 const $loading = $('.loading');
-const $loadingLogo = $('.loading__logo');
+const $loadingLogo = $('.loading__center');
 const $navItems = $(
   '.nav__menu-item, .nav__lang-item, .hero__bottom-line, .cta2'
 );
@@ -45,7 +45,7 @@ const loadingTl = new TimelineLite({
   paused: true
 });
 
-loadingTl.to($loadingLogo, 0.3, {opacity: 0, y: -400, delay: 0.6});
+loadingTl.to($loadingLogo, 0.6, {opacity: 0, y: -500, delay: .5});
 loadingTl.to($loading, 0.3, {y: '-100%'});
 loadingTl.staggerFromTo(
   $navItems,
@@ -62,8 +62,6 @@ loadingTl.staggerFromTo(
   {opacity: 1, y: 0, scale: 1},
   0.2
 );
-
-$loading.hide();
 
 $(window).on('load', () => {
   loadingTl.play();

@@ -9,6 +9,10 @@
       padding-left: 30px;
       padding-right: 30px;
     }
+    @include breakpoint(small down) {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
   }
   @include breakpoint(medium) {
     position: fixed;
