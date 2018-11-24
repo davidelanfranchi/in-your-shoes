@@ -1,5 +1,5 @@
 .photo {
-  pointer-events: none;
+  // pointer-events: none;
   overflow: hidden;
   position: relative;
   background: linear-gradient(#f7f7f700, #f7f7f7);
@@ -30,6 +30,35 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    @include breakpoint(medium) {
+      bottom: 40%;
+      right: 30px;
+    }
+    @include breakpoint(large) {
+      bottom: 30px;
+      right: 30px;
+    }
+    @include breakpoint(xlarge) {
+      bottom: 40px;
+      right: 40px;
+    }
+    font-size: 10px;
+    color: #979797;
+    span {
+      color: #4a4a4a;
+    }
+
+    &:hover {
+      color: #979797;
+    }
+    transform-origin: left center;
+    transform: translateX(100%) rotate(-90deg);
   }
 }
 
