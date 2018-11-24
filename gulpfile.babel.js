@@ -38,8 +38,7 @@ gulp.task(
   gulp.series(
     clean,
     gulp.parallel(pages, javascript, images, copy),
-    sass,
-    styleGuide
+    sass
   )
 );
 
