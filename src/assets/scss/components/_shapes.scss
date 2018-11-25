@@ -58,7 +58,12 @@
   transform: translateY(var(--ty)) rotate(var(--r)) scale(var(--s));
 }
 
-.bal-01 {
+.bal-01-wr {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   display: block;
   width: 30px;
   @include breakpoint(medium) {
@@ -76,7 +81,12 @@
   left: 10%;
   transform: rotate(-6deg);
 }
-.bal-02 {
+.bal-02-wr {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   display: block;
   width: 40px;
   @include breakpoint(medium) {
@@ -94,7 +104,12 @@
   right: 10%;
   transform: rotate(6deg);
 }
-.hang-01 {
+.hang-01-wr {
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   display: block;
   width: 40px;
   @include breakpoint(large) {

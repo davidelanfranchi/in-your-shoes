@@ -8,7 +8,7 @@ export default class Shapes {
   }
 
   init() {
-    console.log('Shapes init');
+    // console.log('Shapes init');
 
     const bsInstances = [];
     document.querySelectorAll('.transformed-shape').forEach((elem, i) => {
@@ -44,8 +44,25 @@ export default class Shapes {
           direct: true,
           props: {
             '--s': {
-              from: '.5',
-              to: '1.2'
+              from: '2',
+              to: '.5'
+            }
+          }
+        })
+      );
+    });
+
+    document.querySelectorAll('.transformed-shape-3').forEach((elem, i) => {
+      bsInstances.push(
+        basicScroll.create({
+          elem: elem,
+          from: 'middle-bottom',
+          to: 'bottom-top',
+          direct: true,
+          props: {
+            '--ty': {
+              from: '-100px',
+              to: '100px'
             }
           }
         })

@@ -17,7 +17,7 @@ export default class contactPanel {
   }
 
   init() {
-    console.log('contactPanel init');
+    // console.log('contactPanel init');
 
     this.tl = new TimelineLite({
       paused: true,

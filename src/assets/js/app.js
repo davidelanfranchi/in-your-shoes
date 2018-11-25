@@ -13,8 +13,8 @@ window.$ = $;
 import vhCheck from 'vh-check';
 const vhTest = vhCheck();
 
-import {TweenLite, TimelineLite, ScrollToPlugin, Power4, Expo} from 'gsap/all';
-const plugins = [ScrollToPlugin, Power4];
+import {TweenLite, TimelineLite, ScrollToPlugin, Power4} from 'gsap/all';
+const gsap_references = [TweenLite, TimelineLite, ScrollToPlugin, Power4];
 
 const $scrollToElements = $('[data-scroll-to]');
 $scrollToElements.click(function(e) {
@@ -39,13 +39,13 @@ const $navItems = $(
   '.nav__menu-item, .nav__lang-item, .hero__bottom-line, .cta2'
 );
 const $mainCta = $('.maincta');
-const $icons = $('.bal-01, .bal-02, .hang-01');
+const $icons = $('.bal-01-wr, .bal-02-wr, .hang-01-wr');
 
 const loadingTl = new TimelineLite({
   paused: true
 });
 
-loadingTl.to($loadingLogo, 0.6, {opacity: 0, y: -500, delay: .5});
+loadingTl.to($loadingLogo, 0.6, {opacity: 0, y: -500, delay: 0.5});
 loadingTl.to($loading, 0.3, {y: '-100%'});
 loadingTl.staggerFromTo(
   $navItems,
@@ -57,7 +57,7 @@ loadingTl.staggerFromTo(
 loadingTl.from($mainCta, 1, {opacity: 0, y: '200%'}, '-=0.6');
 loadingTl.staggerFromTo(
   $icons,
-  .6,
+  0.6,
   {opacity: 0, y: 50, scale: 0},
   {opacity: 1, y: 0, scale: 1},
   0.2

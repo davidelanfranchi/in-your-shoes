@@ -118,7 +118,7 @@ function sass() {
 }
 
 let webpackConfig = {
-  mode: PRODUCTION ? 'production' : 'development',
+  mode: (PRODUCTION ? 'production' : 'development'),
   module: {
     rules: [
       {
@@ -126,7 +126,7 @@ let webpackConfig = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
             compact: false
           }
         }
@@ -134,24 +134,18 @@ let webpackConfig = {
     ]
   },
   devtool: !PRODUCTION && 'source-map'
-};
+}
 
 // Combine JavaScript into one file
 // In production, the file is minified
-function javascript() {
-  return gulp
-    .src(PATHS.entries)
+function javascript () {
+  return gulp.src(PATHS.entries)
     .pipe(named())
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
-    .pipe(
-      $.if(
-        PRODUCTION,
-        $.uglify().on('error', e => {
-          console.log(e);
-        })
-      )
-    )
+    .pipe($.if(PRODUCTION, $.uglify()
+      .on('error', e => { console.log(e); })
+    ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
 }
