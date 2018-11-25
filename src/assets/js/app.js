@@ -5,6 +5,7 @@ import vhCheck from 'vh-check';
 
 import {TweenLite, TimelineLite, Power4, Expo} from 'gsap/TweenMax';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+const plugins = [ScrollToPlugin];
 
 import contactPanel from './modules/contactPanel';
 import Shapes from './modules/Shapes';
