@@ -1,4 +1,4 @@
-import {TweenLite, TimelineLite, Expo} from 'gsap/all';
+// import {TimelineLite, Expo} from 'gsap/all';
 
 export default class contactPanel {
   constructor() {

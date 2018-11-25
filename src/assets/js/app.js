@@ -1,20 +1,21 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
 
+import vhCheck from 'vh-check';
+
+import {TweenLite, TimelineLite, Power4, Expo} from 'gsap/TweenMax';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
+import contactPanel from './modules/contactPanel';
+import Shapes from './modules/Shapes';
+
 window.$ = $;
 
-// import Foundation from 'foundation-sites';
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
+// viewport height
 
-// $(document).foundation();
-
-import vhCheck from 'vh-check';
 const vhTest = vhCheck();
 
-import {TweenLite, TimelineLite, ScrollToPlugin, Power4} from 'gsap/all';
-const gsap_references = [TweenLite, TimelineLite, ScrollToPlugin, Power4];
+// scroll to elements
 
 const $scrollToElements = $('[data-scroll-to]');
 $scrollToElements.click(function(e) {
@@ -26,13 +27,8 @@ $scrollToElements.click(function(e) {
   });
 });
 
-import contactPanel from './modules/contactPanel';
-const contact_panel = new contactPanel();
-
-import Shapes from './modules/Shapes';
-const shapes = new Shapes();
-
 // Loading overlay
+
 const $loading = $('.loading');
 const $loadingLogo = $('.loading__center');
 const $navItems = $(
@@ -63,6 +59,22 @@ loadingTl.staggerFromTo(
   0.2
 );
 
+// custom modules
+
+const contact_panel = new contactPanel();
+const shapes = new Shapes();
+
+// start on load
+
 $(window).on('load', () => {
   loadingTl.play();
 });
+
+// credits
+
+if (!!window.chrome || !!(browser.isFirefox && support.modifiedConsole)) {
+  console.log(
+    '%c 👋 https://davidelanfranchi.com ',
+    'background: #6cdac1; color: #ffffff; padding:5px;'
+  );
+}

@@ -1,4 +1,3 @@
-import {TweenLite, TimelineLite, Expo} from 'gsap/all';
 import * as basicScroll from 'basicscroll';
 import debounce from 'lodash.debounce';
 
