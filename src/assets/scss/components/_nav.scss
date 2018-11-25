@@ -56,6 +56,13 @@
     position: relative;
     font-weight: bold;
     margin-left: 1em;
+    font-size: 16px;
+    @include breakpoint(xlarge) {
+      margin-left: 1.5em;
+    }
+    @include breakpoint(xxlarge) {
+      font-size: 17px;
+    }
     span {
       color: $pink;
       font-size: 1.3em;
